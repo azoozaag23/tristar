@@ -1,0 +1,21 @@
+[project]
+name = "tristar"
+version = "1.0.0"
+description = "Custom ERPNext App for TriStar Technical Company - Dammam, Saudi Arabia"
+authors = [
+    {name = "TriStar Technical Company", email = "info@tristartech.com"}
+]
+requires-python = ">=3.10"
+dependencies = [
+    "frappe",
+    "erpnext",
+]
+license = {text = "MIT"}
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.bench.frappe-dependencies]
+frappe = ">=15.0.0"
+erpnext = ">=15.0.0"
