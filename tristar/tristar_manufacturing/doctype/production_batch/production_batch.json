@@ -1,0 +1,257 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "pce_grade",
+  "batch_date",
+  "column_break_1",
+  "status",
+  "reactor_id",
+  "shift",
+  "section_break_qty",
+  "planned_qty_mt",
+  "actual_qty_mt",
+  "column_break_qty",
+  "batch_yield_pct",
+  "waste_qty_mt",
+  "section_break_raw",
+  "raw_materials_consumed",
+  "section_break_qc",
+  "qc_status",
+  "qc_reference",
+  "column_break_qc",
+  "approved_by",
+  "approval_date",
+  "section_break_store",
+  "warehouse",
+  "lot_number",
+  "expiry_date",
+  "column_break_store",
+  "storage_temp_min",
+  "storage_temp_max",
+  "section_break_notes",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "TST-BATCH-.YYYY.-.####",
+   "default": "TST-BATCH-.YYYY.-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pce_grade",
+   "fieldtype": "Link",
+   "label": "PCE Grade",
+   "options": "PCE Grade",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "batch_date",
+   "fieldtype": "Date",
+   "label": "Production Date",
+   "reqd": 1,
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nIn Production\nQC Hold\nApproved\nRejected\nShipped",
+   "default": "Draft",
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "reactor_id",
+   "fieldtype": "Data",
+   "label": "Reactor / Tank ID"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "Morning\nAfternoon\nNight"
+  },
+  {
+   "fieldname": "section_break_qty",
+   "fieldtype": "Section Break",
+   "label": "Quantities"
+  },
+  {
+   "fieldname": "planned_qty_mt",
+   "fieldtype": "Float",
+   "label": "Planned Qty (MT)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "actual_qty_mt",
+   "fieldtype": "Float",
+   "label": "Actual Qty (MT)"
+  },
+  {
+   "fieldname": "column_break_qty",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "batch_yield_pct",
+   "fieldtype": "Float",
+   "label": "Batch Yield (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "waste_qty_mt",
+   "fieldtype": "Float",
+   "label": "Waste / Loss (MT)"
+  },
+  {
+   "fieldname": "section_break_raw",
+   "fieldtype": "Section Break",
+   "label": "Raw Materials Consumed"
+  },
+  {
+   "fieldname": "raw_materials_consumed",
+   "fieldtype": "Table",
+   "label": "Raw Materials Consumed",
+   "options": "Production Batch Raw Material"
+  },
+  {
+   "fieldname": "section_break_qc",
+   "fieldtype": "Section Break",
+   "label": "Quality Control"
+  },
+  {
+   "fieldname": "qc_status",
+   "fieldtype": "Select",
+   "label": "QC Status",
+   "options": "Pending\nPass\nFail\nConditional Pass",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "qc_reference",
+   "fieldtype": "Link",
+   "label": "QC Test Reference",
+   "options": "Quality Control Test"
+  },
+  {
+   "fieldname": "column_break_qc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "section_break_store",
+   "fieldtype": "Section Break",
+   "label": "Storage & Logistics"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Finished Goods Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "lot_number",
+   "fieldtype": "Data",
+   "label": "Lot / Batch Number"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "column_break_store",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "storage_temp_min",
+   "fieldtype": "Float",
+   "label": "Storage Temp Min (°C)"
+  },
+  {
+   "fieldname": "storage_temp_max",
+   "fieldtype": "Float",
+   "label": "Storage Temp Max (°C)"
+  },
+  {
+   "fieldname": "section_break_notes",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text Editor",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Production Batch",
+   "print_hide": 1,
+   "no_copy": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "TriStar Manufacturing",
+ "name": "Production Batch",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "TriStar Production Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "TriStar Lab Technician",
+   "write": 1
+  }
+ ],
+ "sort_field": "batch_date",
+ "sort_order": "DESC",
+ "title_field": "pce_grade",
+ "track_changes": 1
+}

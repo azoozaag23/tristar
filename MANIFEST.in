@@ -1,0 +1,6 @@
+include requirements.txt
+recursive-include tristar/public *
+recursive-include tristar/templates *
+recursive-include tristar/*/doctype *
+recursive-include tristar/*/report *
+recursive-include tristar/translations *

@@ -1,0 +1,235 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer",
+  "contact_person",
+  "request_date",
+  "column_break_1",
+  "status",
+  "assigned_to",
+  "priority",
+  "section_break_project",
+  "project_name",
+  "project_location",
+  "concrete_grade",
+  "column_break_project",
+  "cement_type",
+  "w_c_ratio",
+  "target_slump_mm",
+  "section_break_pce",
+  "recommended_pce_grade",
+  "recommended_dosage_pct",
+  "column_break_pce",
+  "expected_water_reduction",
+  "expected_slump_retention",
+  "section_break_outcome",
+  "trial_mix_done",
+  "trial_mix_result",
+  "final_recommendation",
+  "section_break_followup",
+   "follow_up_date",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "TST-CTR-.YYYY.-.####",
+   "default": "TST-CTR-.YYYY.-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Link",
+   "label": "Contact Person",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Request Date",
+   "reqd": 1,
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nIn Progress\nRecommendation Sent\nClosed - Won\nClosed - Lost",
+   "default": "Open",
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent",
+   "default": "Medium"
+  },
+  {
+   "fieldname": "section_break_project",
+   "fieldtype": "Section Break",
+   "label": "Project Information"
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name"
+  },
+  {
+   "fieldname": "project_location",
+   "fieldtype": "Data",
+   "label": "Project Location"
+  },
+  {
+   "fieldname": "concrete_grade",
+   "fieldtype": "Data",
+   "label": "Concrete Grade (e.g. C40)"
+  },
+  {
+   "fieldname": "column_break_project",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cement_type",
+   "fieldtype": "Select",
+   "label": "Cement Type",
+   "options": "\nOPC\nSRC\nHSC\nBlended"
+  },
+  {
+   "fieldname": "w_c_ratio",
+   "fieldtype": "Float",
+   "label": "W/C Ratio"
+  },
+  {
+   "fieldname": "target_slump_mm",
+   "fieldtype": "Float",
+   "label": "Target Slump (mm)"
+  },
+  {
+   "fieldname": "section_break_pce",
+   "fieldtype": "Section Break",
+   "label": "PCE Recommendation"
+  },
+  {
+   "fieldname": "recommended_pce_grade",
+   "fieldtype": "Link",
+   "label": "Recommended PCE Grade",
+   "options": "PCE Grade"
+  },
+  {
+   "fieldname": "recommended_dosage_pct",
+   "fieldtype": "Float",
+   "label": "Recommended Dosage (% bwc)"
+  },
+  {
+   "fieldname": "column_break_pce",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_water_reduction",
+   "fieldtype": "Float",
+   "label": "Expected Water Reduction (%)"
+  },
+  {
+   "fieldname": "expected_slump_retention",
+   "fieldtype": "Float",
+   "label": "Expected Slump Retention (hrs)"
+  },
+  {
+   "fieldname": "section_break_outcome",
+   "fieldtype": "Section Break",
+   "label": "Trial Mix & Outcome"
+  },
+  {
+   "fieldname": "trial_mix_done",
+   "fieldtype": "Check",
+   "label": "Trial Mix Conducted"
+  },
+  {
+   "fieldname": "trial_mix_result",
+   "fieldtype": "Select",
+   "label": "Trial Mix Result",
+   "options": "\nSuccess\nPartial Success\nFailed"
+  },
+  {
+   "fieldname": "final_recommendation",
+   "fieldtype": "Text Editor",
+   "label": "Final Recommendation / Mix Design Report"
+  },
+  {
+   "fieldname": "section_break_followup",
+   "fieldtype": "Section Break",
+   "label": "Follow-up"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Follow-up Date"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  }
+ ],
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "TriStar Sales",
+ "name": "Customer Technical Request",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "TriStar Sales Executive",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "read": 1,
+   "role": "TriStar Production Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "request_date",
+ "sort_order": "DESC",
+ "title_field": "customer",
+ "track_changes": 1
+}

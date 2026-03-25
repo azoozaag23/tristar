@@ -1,0 +1,5 @@
+[pre_migrate]
+tristar.setup.install.before_install
+
+[post_migrate]
+tristar.setup.install.after_install

@@ -1,0 +1,41 @@
+/*
+ * TriStar Technical Company — Custom ERPNext Styles
+ * Dammam, Saudi Arabia
+ */
+
+/* Brand colors */
+:root {
+  --tristar-blue: #1a6fbf;
+  --tristar-green: #2ecc71;
+  --tristar-orange: #e67e22;
+  --tristar-red: #e74c3c;
+}
+
+/* PCE Grade status badges */
+.indicator.green[data-status="Approved"] {
+  background-color: var(--tristar-green);
+}
+.indicator.red[data-status="Rejected"],
+.indicator.red[data-status="QC Hold"] {
+  background-color: var(--tristar-red);
+}
+
+/* Arabic text alignment in forms */
+[lang="ar"] .frappe-control input,
+[lang="ar"] .frappe-control textarea {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Production batch yield indicator */
+.batch-yield-high { color: var(--tristar-green); font-weight: bold; }
+.batch-yield-low  { color: var(--tristar-red);   font-weight: bold; }
+
+/* Dashboard card accent */
+.tristar-card {
+  border-left: 4px solid var(--tristar-blue);
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #f8fafc;
+}
