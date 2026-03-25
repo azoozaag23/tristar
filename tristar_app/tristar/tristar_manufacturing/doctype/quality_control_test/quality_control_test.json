@@ -1,0 +1,239 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "production_batch",
+  "pce_grade",
+  "test_date",
+  "column_break_1",
+  "tested_by",
+  "overall_result",
+  "section_break_ph",
+  "ph_result",
+  "ph_pass",
+  "column_break_ph",
+  "viscosity_result",
+  "viscosity_pass",
+  "section_break_density",
+  "density_result",
+  "density_pass",
+  "column_break_density",
+  "solid_content_result",
+  "solid_content_pass",
+  "section_break_performance",
+  "water_reduction_result",
+  "water_reduction_pass",
+  "column_break_performance",
+  "slump_retention_result",
+  "slump_retention_pass",
+  "section_break_notes",
+  "comments",
+  "attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "TST-QC-.YYYY.-.####",
+   "default": "TST-QC-.YYYY.-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "production_batch",
+   "fieldtype": "Link",
+   "label": "Production Batch",
+   "options": "Production Batch",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "pce_grade",
+   "fieldtype": "Link",
+   "label": "PCE Grade",
+   "options": "PCE Grade",
+   "fetch_from": "production_batch.pce_grade",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "test_date",
+   "fieldtype": "Date",
+   "label": "Test Date",
+   "reqd": 1,
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tested_by",
+   "fieldtype": "Link",
+   "label": "Tested By",
+   "options": "User"
+  },
+  {
+   "fieldname": "overall_result",
+   "fieldtype": "Select",
+   "label": "Overall Result",
+   "options": "Pending\nPass\nFail\nConditional Pass",
+   "default": "Pending",
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_break_ph",
+   "fieldtype": "Section Break",
+   "label": "pH Test"
+  },
+  {
+   "fieldname": "ph_result",
+   "fieldtype": "Float",
+   "label": "pH Measured"
+  },
+  {
+   "fieldname": "ph_pass",
+   "fieldtype": "Check",
+   "label": "pH Pass",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ph",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "viscosity_result",
+   "fieldtype": "Float",
+   "label": "Viscosity (mPa·s)"
+  },
+  {
+   "fieldname": "viscosity_pass",
+   "fieldtype": "Check",
+   "label": "Viscosity Pass",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_density",
+   "fieldtype": "Section Break",
+   "label": "Density & Solid Content"
+  },
+  {
+   "fieldname": "density_result",
+   "fieldtype": "Float",
+   "label": "Density (g/cm³)"
+  },
+  {
+   "fieldname": "density_pass",
+   "fieldtype": "Check",
+   "label": "Density Pass",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_density",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "solid_content_result",
+   "fieldtype": "Float",
+   "label": "Solid Content (%)"
+  },
+  {
+   "fieldname": "solid_content_pass",
+   "fieldtype": "Check",
+   "label": "Solid Content Pass",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_performance",
+   "fieldtype": "Section Break",
+   "label": "Performance Tests"
+  },
+  {
+   "fieldname": "water_reduction_result",
+   "fieldtype": "Float",
+   "label": "Water Reduction (%)"
+  },
+  {
+   "fieldname": "water_reduction_pass",
+   "fieldtype": "Check",
+   "label": "Water Reduction Pass",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_performance",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "slump_retention_result",
+   "fieldtype": "Float",
+   "label": "Slump Retention (hrs)"
+  },
+  {
+   "fieldname": "slump_retention_pass",
+   "fieldtype": "Check",
+   "label": "Slump Retention Pass",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes & Documents"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Text Editor",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Lab Report (PDF)"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "TriStar Manufacturing",
+ "name": "Quality Control Test",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "TriStar Lab Technician",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "TriStar Production Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1
+  }
+ ],
+ "sort_field": "test_date",
+ "sort_order": "DESC",
+ "title_field": "production_batch",
+ "track_changes": 1
+}

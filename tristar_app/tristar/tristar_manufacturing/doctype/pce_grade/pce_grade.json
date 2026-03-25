@@ -1,0 +1,229 @@
+{
+ "actions": [],
+ "autoname": "field:grade_code",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "grade_code",
+  "grade_name",
+  "grade_name_ar",
+  "column_break_1",
+  "grade_type",
+  "status",
+  "section_break_specs",
+  "solid_content_pct",
+  "ph_min",
+  "ph_max",
+  "column_break_specs",
+  "viscosity_min",
+  "viscosity_max",
+  "density_min",
+  "density_max",
+  "section_break_performance",
+  "water_reduction_pct",
+  "slump_retention_hrs",
+  "column_break_perf",
+  "early_strength",
+  "clay_tolerant",
+  "section_break_raw",
+  "raw_materials_table",
+  "section_break_docs",
+  "tds_file",
+  "msds_file",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "grade_code",
+   "fieldtype": "Data",
+   "label": "Grade Code",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "grade_name",
+   "fieldtype": "Data",
+   "label": "Grade Name (English)",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "grade_name_ar",
+   "fieldtype": "Data",
+   "label": "اسم الدرجة (عربي)",
+   "reqd": 0,
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grade_type",
+   "fieldtype": "Select",
+   "label": "Grade Type",
+   "options": "High-Range Water Reducer\nMid-Range Water Reducer\nSlump Retainer\nHybrid\nEarly Strength Agent\nClay-Tolerant\nSpecialty",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nDiscontinued\nUnder Development",
+   "default": "Active",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_break_specs",
+   "fieldtype": "Section Break",
+   "label": "Technical Specifications"
+  },
+  {
+   "fieldname": "solid_content_pct",
+   "fieldtype": "Float",
+   "label": "Solid Content (%)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ph_min",
+   "fieldtype": "Float",
+   "label": "pH Min"
+  },
+  {
+   "fieldname": "ph_max",
+   "fieldtype": "Float",
+   "label": "pH Max"
+  },
+  {
+   "fieldname": "column_break_specs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "viscosity_min",
+   "fieldtype": "Float",
+   "label": "Viscosity Min (mPa·s)"
+  },
+  {
+   "fieldname": "viscosity_max",
+   "fieldtype": "Float",
+   "label": "Viscosity Max (mPa·s)"
+  },
+  {
+   "fieldname": "density_min",
+   "fieldtype": "Float",
+   "label": "Density Min (g/cm³)"
+  },
+  {
+   "fieldname": "density_max",
+   "fieldtype": "Float",
+   "label": "Density Max (g/cm³)"
+  },
+  {
+   "fieldname": "section_break_performance",
+   "fieldtype": "Section Break",
+   "label": "Performance Properties"
+  },
+  {
+   "fieldname": "water_reduction_pct",
+   "fieldtype": "Float",
+   "label": "Water Reduction (%)"
+  },
+  {
+   "fieldname": "slump_retention_hrs",
+   "fieldtype": "Float",
+   "label": "Slump Retention (hours)"
+  },
+  {
+   "fieldname": "column_break_perf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "early_strength",
+   "fieldtype": "Check",
+   "label": "Early Strength"
+  },
+  {
+   "fieldname": "clay_tolerant",
+   "fieldtype": "Check",
+   "label": "Clay Tolerant"
+  },
+  {
+   "fieldname": "section_break_raw",
+   "fieldtype": "Section Break",
+   "label": "Raw Materials"
+  },
+  {
+   "fieldname": "raw_materials_table",
+   "fieldtype": "Table",
+   "label": "Raw Materials",
+   "options": "PCE Grade Raw Material"
+  },
+  {
+   "fieldname": "section_break_docs",
+   "fieldtype": "Section Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "tds_file",
+   "fieldtype": "Attach",
+   "label": "Technical Data Sheet (TDS)"
+  },
+  {
+   "fieldname": "msds_file",
+   "fieldtype": "Attach",
+   "label": "Safety Data Sheet (MSDS)"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "TriStar Manufacturing",
+ "name": "PCE Grade",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "TriStar Production Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "TriStar Lab Technician",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "TriStar Sales Executive",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "grade_name",
+ "track_changes": 1
+}
